@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 var commandLineArgs = require("command-line-args");
 var options = commandLineArgs([
   {name: 'port', alias: 'p', type: Number, defaultValue: 8765},
@@ -8,6 +6,7 @@ var options = commandLineArgs([
 var usage;
 
 function runServer(target, port){
+//  require('steal-builtins');
   var connect = require('connect');
   var url = require('url');
   var proxy = require('proxy-middleware');
